@@ -1,0 +1,114 @@
+:root {
+    --font-sans: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
+    --blue-grey: rgb(212,226,235);
+    --dark-grey: rgb(36, 35, 35);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--dark-grey);
+    margin: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--blue-grey);
+    border-radius: 15px;
+    border: 3px solid transparent;
+    background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    border: 3px solid transparent;
+    background-clip: content-box;
+}
+
+* {box-sizing: border-box;}
+
+body {
+  background-color: var(--dark-grey);  
+  margin: 0;
+  font-family: var(--font-sans);
+}
+
+
+
+#navbar {
+    background-color: var(--dark-grey); 
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    transition: top 0.75s; 
+}
+  
+/* Style the navbar links */
+#navbar a {
+    float: left;
+    display: block;
+    color: var(--blue-grey);
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+    transition: 0.4s;
+}
+  
+#navbar a:hover {
+    color: green;
+}
+
+#navbar #logo {
+  font-size: 35px;
+  font-weight: bold;
+  transition: 0.4s;
+  padding-left: 50px;
+}
+
+#navbar-right {
+  float: right;
+  padding-right: 35px;
+  margin-top: 10px;
+}
+
+#navbar .cv {
+    color: rgb(26, 134, 26);
+    border: 2px solid;
+    border-radius: 6px;
+    padding: 0.4rem 0.8rem;
+    margin: 0 15px;
+    margin-top: 8px;
+}
+
+#navbar .cv:hover {
+    background-color: rgba(26, 134, 26, 0.158);
+}
+
+
+#about {
+    color: var(--blue-grey);
+    margin-top: 210px;
+    padding: 15px 15px 200px;
+    font-size: 30px;
+    margin: 120px 150px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+@media screen and (max-width: 580px) {
+  #navbar {
+    padding: 20px 10px !important;
+  }
+  #navbar a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  #navbar-right {
+    float: none;
+  }
+}
